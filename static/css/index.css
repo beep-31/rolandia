@@ -1,0 +1,472 @@
+/* Lato regular */
+
+@font-face{
+    font-family: 'Lato';
+    src: url("../fonts/Lato/Lato Regular/Lato-Regular.eot"),
+         url("../fonts/Lato/Lato Regular/Lato-Regular.woff2") format('woff2'),
+         url("../fonts/Lato/Lato Regular/Lato-Regular.woff") format('woff'),
+         url("../fonts/Lato/Lato Regular/Lato-Regular.ttf") format('trutype');
+        
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Lato Light  */
+  @font-face{
+    font-family: 'Lato';
+    src: url("../fonts/Lato/Lato Light/Lato-Light.eot"),
+         url("../fonts/Lato/Lato Light/Lato-Light.woff2") format('woff2'),
+         url("../fonts/Lato/Lato Light/Lato-Light.woff") format('woff'),
+         url("../fonts/Lato/Lato Light/Lato-Light.ttf") format('trutype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  /* Lato Bold  */
+  @font-face {
+    font-family: 'Lato';
+    src: url("../fonts/Lato/Lato Black/Lato-Black.eot"),
+         url("../fonts/Lato/Lato Black/Lato-Black.woff2") format('woff2'),
+         url("../fonts/Lato/Lato Black/Lato-Black.woff") format('woff'),
+         url("../fonts/Lato/Lato Black/Lato-Black.ttf") format('trutype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  /* Maven pro medium */
+  @font-face{
+    font-family: 'Maven Pro';
+    src: url("../fonts/Maven Pro/MavenPro-Medium.eot"),
+         url("../fonts/Maven Pro/MavenPro-Medium.woff2") format('woff2'),
+         url("../fonts/Maven Pro/MavenPro-Medium.woff") format('woff'),
+         url("../fonts/Maven Pro/MavenPro-Medium.ttf") format('trutype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  :root{
+    --primary-color :#a29bfe; 
+  }
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      outline: none;
+    }
+  *::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      outline: none;
+    }
+  *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      outline: none;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+    }
+  
+  
+  .header{
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100vw;
+  }
+  
+  .header__inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+    color: #f5f6fa;
+    width: 100vw;
+  }
+  
+  .header__nav{
+    display: none;
+  }
+  
+  .header__nav__link{
+      color: #f5f6fa;
+  }
+  
+  .header__search svg{
+      width: 30px;
+      height: 30px;
+      fill: #f5f6fa;
+      cursor: pointer;
+  }
+  
+  .search-input{
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      transition: 0.35s linear;
+      right: 0;
+      z-index: 0;
+  }
+  
+  .search-input--active{
+      top: 54px;
+  }
+  
+  .header__logo{
+    font-size: 20px;
+  }
+
+  .search-input form{
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+  }
+  
+  .search-input input[type='text']{
+      width: 100%;
+      max-width: 200px;
+      border: none;
+      border-bottom: 1px solid var(--primary-color);
+      height: 36px;
+      box-shadow:  1px 1px 6px 0px rgba(0,0,0,0.4);
+      padding: 0px 2px;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      color: #f5f6fa;
+      background-color: var(--primary-color);
+      border-radius: 10px;
+  }
+
+  .search-input button{
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow:  1px 1px 6px 0px rgba(0,0,0,0.4);
+  }
+
+  .search-input svg{
+    fill: #f5f6fa;
+  }
+  
+  .search-input input::placeholder{
+    font-family: 'Maven pro', sans-serif;
+    font-size: 12px;
+    color: #f5f6fa;
+  }
+  
+  .nav__mobile{
+    position: absolute;
+    left: -100%;
+    top: 0%;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 10;
+    background-color: var(--primary-color);
+  }
+  
+  .nav__close{
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  
+  .nav__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px 10px;
+    height: 30%;
+  }
+  
+  .nav__links a{
+    color: #ecf0f1;
+  }
+  
+  .close-item{
+    display: flex;
+    width: 35px;
+    height: 4px;
+    background-color: #ecf0f1;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    transform: rotate(-45deg);
+    transition: 0.1s;
+  }
+  
+  .close-item::after{
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 4px;
+    transform: rotate(90deg);
+    background-color: #ecf0f1;
+    border-radius: 5px;
+  }
+  
+  .header__burger--closed{
+    display: flex;
+    width: 33px;
+    height: 4px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: 0.1s linear;
+  }
+  
+  .header__burger--closed::after{
+    content: "";
+    display: block;
+    width: 35.5px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 0;
+    transition: 0.1s linear;
+  }
+  
+  .header__burger--closed::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    cursor: pointer;
+    top: -10px;
+    left: 0;
+    transition: 0.1s linear;
+  }
+
+.results{
+    margin-top: 103px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.results__title{
+  font-family: 'Lato', sans-serif;
+  max-width: 280px;
+  margin: 0 auto 10px auto;
+}
+
+.results__total{
+  font-weight: 300;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+main{
+  margin-bottom: 60px;
+}
+
+.card{
+    max-width: 280px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.card__img {
+    max-width: 280px;
+    min-height: 260px;
+    width: 100%;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.card__img img{
+  width: 100%;
+  height: 100%;
+}
+
+.card__info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__info__title a{
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+.card__info__price{
+    font-size: 16px;
+    color: #2c3e50;
+    
+}
+
+.card__info__right{
+  font-size: 12px;
+}
+
+.card__details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: transparent;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s all linear;
+}
+
+.card__details:hover{
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+
+.card__details a{
+  padding: 12px 8px;
+  background-color: #fff;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.title{
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: #34495e;
+  font-weight: 300;
+}
+
+.footer{
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #34495e;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
+  color: #7d7d7d;
+  font-size: inherit;
+}
+
+.footer__logo{
+  display: inline;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  padding: .6rem;
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
+}
+
+
+  @media(min-width:768px){
+    .cards{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .card{
+      max-width:50%;
+      min-width: 280px;
+      margin-bottom: 30px;
+    }
+
+    .card__img img{
+      max-width: 280px;
+      max-height: 350px;
+    }
+
+    .results__title{
+      max-width: 512px;
+    }
+
+    .results__total{
+      max-width: 512px;
+    }
+  }
+
+  @media (min-width:1024px){
+
+    .cards{
+      max-width: 940px;
+    }
+
+    .card{
+      max-width: 33%;
+    }
+
+    .nav__mobile{
+        display: none;
+        visibility: hidden;
+      }
+    
+      .header__mobile{
+        display: none;
+      }
+    
+      .header__nav{
+        display: flex;
+        flex-grow: 0.5;
+      }
+    
+      .header__nav nav{
+        max-width: 300px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+    
+      .header__logo{
+        flex-grow: 0.8;
+        font-size: 24px;
+        justify-self: center;
+      }
+    
+      .header__inner{
+        margin: 0 auto;
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    
+      .header__nav__link{
+        opacity: 0.8;
+        transition: 0.1s linear;
+      }
+    
+      .header__nav__link:hover{
+        opacity: 1;
+      }
+  }
+
+  @media (min-width:1380px){
+    .search-input{
+      right: 15%;
+    }
+  }
