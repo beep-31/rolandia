@@ -27,12 +27,11 @@
         </div>
         <div class="nav__social-media">
             <a class="social-media__link">
-
             </a>
         </div>
     </nav>
     <section class="search-input" id="searchbox">
-        <form action="index.html" method="GET">
+        <form action="search" method="POST">{% csrf_token %}
             <input type="text" name="search-item" placeholder="Search here" required>
             <button type="submit">
                 <svg width="14px" height="14px">
@@ -72,7 +71,7 @@
             </div>
         </section>
         <section class="form">
-            <form action="index.html" method="GET">
+            <form action="search" method="GET">
                 <div class="form__cover">
                     <div class="form__inner">
                         <div class="form__input">
@@ -87,11 +86,11 @@
                     </div>
                 </div>
                 <div class="form__dropdown">
-                    <input type="radio" name="sortType" value="Relevance" checked="checked" id="sort-relevance">
+                    <input type="radio" name="sortType" value="relevance" checked="checked" id="sort-relevance">
                     <label for="sort-relevance">Relevance</label>
-                    <input type="radio" name="sortType" value="PriceIncreasing" id="sort-low">
+                    <input type="radio" name="sortType" value="priceIncreasing" id="sort-low">
                     <label for="sort-low">Price Low to High</label>
-                    <input type="radio" name="sortType" value="PriceDecreasing" id="sort-high">
+                    <input type="radio" name="sortType" value="priceDecreasing" id="sort-high">
                     <label for="sort-high">Price High to Low</label>
                 </div>
             </form>
