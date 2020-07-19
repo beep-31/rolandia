@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results for product</title>
+    <title>Results for {{search}}</title>
     <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
@@ -20,9 +20,9 @@
             <div class="close-item"></div>
         </div>
         <div class="nav__links">
-            <a href="/home.html" class="header__nav__link">Home</a>
-            <a href="" class="header__nav__link">Github</a>
-            <a href="" class="header__nav__link">My portfolio</a>
+            <a href="127.0.0.1" class="header__nav__link">Home</a>
+            <a href="https://github.com/beep-31/rolandia" class="header__nav__link">Github</a>
+            <a href="http://alexwebportfolio.herokuapp.com/" class="header__nav__link">My portfolio</a>
         </div>
         <div class="nav__social-media">
             <a class="social-media__link">
@@ -65,27 +65,29 @@
     </header>
     <main>
         <div class="results">
-            <h2 class="results__title">Results for air jordan 1</h2>
-            <h4 class="results__total">Total results: 36</h4>
+            <h2 class="results__title">Results for {{search}}</h2>
+            <h4 class="results__total">Total results: {{total}}</h4>
         </div>
         <div class="cards">
+            {% for post in results%}
             <div class="card">
                 <div class="card__img">
-                    <img src="static/img/template.jpg" alt="Clothes scrapper">
+                    <img src="{{post.img}}" alt="{{post.site}}">
                     <div class="card__details">
-                        <a href="">View details</a>
+                        <a href="{{post.link}}" target="_blank">View details</a>
                     </div>
                 </div>
                 <div class="card__info">
                     <div class="card__info__left">
-                        <div class="card__info__title"><a href="#">Air jordan 1</a></div>
-                        <div class="card__info__price">95$</div>
+                        <div class="card__info__title"><a href="{{post.link}}" target="_blank">{{post.title}}</a></div>
+                        <div class="card__info__price">{{post.price}} €</div>
                     </div>
                     <div class="card__info__right">
-                        From: <span class="title">ZALANDO</span>
+                        From:<br><span class="title">{{post.site}}</span>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </main>
     <footer class="footer">
