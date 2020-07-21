@@ -7,7 +7,7 @@ cement==2.8.2
 certifi==2019.9.11
 chardet==3.0.4
 colorama==0.4.3
-Django==2.1.5
+Django==2.2.13
 django-tinymce4-lite==1.7.5
 docutils==0.15.2
 future==0.16.0
